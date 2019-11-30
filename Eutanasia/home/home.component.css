@@ -1,0 +1,42 @@
+
+.navbar-default .navbar-nav>li>a {
+    padding: 5px 5px;
+    cursor: pointer;
+}
+.contenedor_welcome{
+  margin-top: 19px;
+  text-align: center;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #be9e27;
+    background-color: transparent;
+}
+
+@media (max-width: 767px)
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: wheat;
+}
+
+.blog-section{
+	background: white;
+}
+
+.blog-info h2 {
+    min-height: 60px;
+}
+
+.blog-comment-truncate {
+  height: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: justify;
+}
+
+.contenedor-img-services{
+	height: 280px;
+}
+
+.swiper-slide img{
+	opacity: 0.5 !important;
+}

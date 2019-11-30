@@ -1,0 +1,319 @@
+<!--HEADER-->
+<div class="header" style="min-height: 0;max-height: 0">
+	<div class="bg-color" style="min-height: 0;max-height: 0">
+		<header id="main-header">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid" style="padding-top: 1rem; padding-bottom: 2rem;">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a [routerLink]="['/home']" style="cursor: pointer; margin: 0;" hidden class="navbar-brand" href="#">
+							<img class="img-responsive" style="width: auto;height: 100%;min-height: 60px;" src="assets/img/logoX.png">
+						</a>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-sm-2 col-xs-12">
+								<div id="drownHomeImg" class="logo-menu-lista hidden-xs">
+									<a [routerLink]="['/home']" style="cursor: pointer;margin-left: 160px !important;padding: 0;position: relative;width: 100%;margin-top: 2px;" class="navbar-brand" href="#">
+											<img style="width: auto;height: 100%;min-height: 60px;" class="img-responsive" src="assets/img/logoX.png">
+									</a>
+								</div>
+							</div>
+						<div class=" col-md-9 col-sm-8 col-xs-12">
+							<ul style="text-align: center;" class="nav navbar-nav  lista-redes-sociales-header">
+								<li id="drownHome" class="active"><a [routerLink]="['/home']">Home</a></li>
+								<li id="drownServ"  class="" 
+									onmouseover="$('#drownServ').addClass('open')" onmouseleave="$('#drownServ').removeClass('open')">
+									<a class="dropdown-toggle" data-toggle="dropdown" [routerLink]="['/serv']">Services</a>
+									<ul class="subMenu dropdown-menu">
+										<li>
+											<a  (click)="anclaServicios('#incentive')" [routerLink]="['/serv']">Incentive Travel</a>
+										</li>
+										<li>
+											<a  (click)="anclaServicios('#teamR')" [routerLink]="['/serv']">Team Retreats</a>
+										</li>
+										<li>
+											<a  (click)="anclaServicios('#teamT')" [routerLink]="['/serv']">Team Training</a>
+										</li>
+										<li>
+											<a  (click)="anclaServicios('#executive')" [routerLink]="['/serv']">Executive Travels</a>
+										</li>
+										<li>
+											<a  (click)="anclaServicios('#company')" [routerLink]="['/serv']">Company Events</a>
+										</li>
+										<li>
+											<a  (click)="anclaServicios('#special')" [routerLink]="['/serv']">Special Requests</a>
+										</li>
+									</ul>
+								</li>
+								<li id="drownBlog" class="">
+									<a [routerLink]="['/blog']">Travel blog</a>
+								</li>
+								<li id="drownContact" class="contact">
+									<a (click)="anclaServicios('#contact')">Contact us</a>
+								</li>
+
+								<li>
+									<div class="contenedor_welcome" style="position: absolute;
+    width: 121px;    right: -20px;" *ngIf="conectado; else other">
+								<div style="color:#F3B571"> Welcome <br> {{usuarioConectado}}<br>
+									<a style="cursor:pointer;color: white;" [routerLink]="['/usuarioQueryMtto']">
+										Go to Admin
+									</a>
+									<span>|</span>
+									<a style="cursor:pointer;color: white;" (click)="bajarSesion()">
+										<span class=""></span>
+										Log out?
+									</a>		                     				
+								</div>
+							</div>
+							<ng-template #other>
+								<div id="login" style="position: absolute;width: 90px;margin-top: 0px;    right: -20px;" onclick="$('.contenedor_modal').css('display','block');$('#div_contenedor_modal_logIn').css('display','block')">
+									<a>
+										<span class=""></span>Log in
+									</a>
+								</div>
+							</ng-template>
+								</li>
+							</ul>
+						</div>
+					<!--	<div class="col-lg-3 col-md-3 col-sm-2 col-xs-12">
+							 <div class="contenedor_welcome" *ngIf="conectado; else other">
+								<div style="color:#F3B571"> Welcome {{usuarioConectado}}
+									<a style="cursor:pointer;color: white;" [routerLink]="['/usuarioQueryMtto']">
+										Go to Admin
+									</a>
+									<span>|</span>
+									<a style="cursor:pointer;color: white;" (click)="bajarSesion()">
+										<span class=""></span>
+										Log out?
+									</a>		                     				
+								</div>
+							</div>
+							<ng-template #other>
+								<div id="login" onclick="$('.contenedor_modal').css('display','block');$('#div_contenedor_modal_logIn').css('display','block')">
+									<a>
+										<span class=""></span>Log in
+									</a>
+								</div>
+							</ng-template>
+						</div> -->
+						<hr class="unique-hr">
+						<ul class="contacto-header">
+							<li>
+								<a href="#">
+									<span class="telefono-header">
+										<h2>Contact us</h2>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="fa fa-phone"></span>
+									<span class="telefono-header">800-554-4093</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div> 
+			</div> 
+		</nav>
+	</header>
+</div>
+<div class="contenedor_modal"></div>
+<div id="div_contenedor_modal_logIn" class="modal">
+	<form id="formulario_login" class="modal-content animate" action="">
+		<div class="imgcontainer">
+			<span onclick="$('.contenedor_modal').css('display','none');$('#div_contenedor_modal_logIn').css('display','none');"
+				class="close" title="Close Modal">Close</span>
+			<h1>Welcome</h1>
+			<h4>Enter you email to sign up or log in.</h4>
+		</div>
+		<div class="container">
+			<div class="contenedor-inputs-login">
+				<input	[(ngModel)]="objetoFiltro.usuario" type="text"	placeholder="Username" name="uname" required>
+			</div>	
+			<div class="contenedor-inputs-login">
+				<input  [(ngModel)]="objetoFiltro.clave" type="password" placeholder="Password" name="psw" required>
+			</div>
+			<div class="pull-right">
+				<span class="psw">Forgot <a href="#">password?</a></span>
+			</div>
+			<div class="contenedor-inputs-login boton-login"> 
+				<button (click)="sendLogin()" type="submit">Login</button>
+			</div>
+			<div class="" style="text-align: center;">
+				<span class="">No account yet? <a href="#">Sign up</a></span>
+			</div>
+		</div>
+	</form>
+	<!-- CONTENIDO -->
+
+	<!-- MODAL -->
+	<div id="mods">
+		<app-modal-noty [idModalInput]="idModal[0]"
+		[claseInput]="claseModal[0]" [closeInput]="closeModal[0]"
+		[confirmInput]="confirmModal[0]" [tituloInput]="tituloModal[0]"
+		[cuerpoInput]="cuerpoModal[0]" [ruteInput]="ruteModal[1]"></app-modal-noty>
+		<app-modal-noty [idModalInput]="idModal[1]"
+		[claseInput]="claseModal[1]" [closeInput]="closeModal[1]"
+		[confirmInput]="confirmModal[0]" [tituloInput]="tituloModal[1]"
+		[cuerpoInput]="cuerpoModal[1]" [ruteInput]="ruteModal[0]"></app-modal-noty>
+		<app-modal-noty [idModalInput]="idModal[2]"
+		[claseInput]="claseModal[2]" [closeInput]="closeModal[1]"
+		[confirmInput]="confirmModal[0]" [tituloInput]="tituloModal[2]"
+		[cuerpoInput]="cuerpoModal[2]" [ruteInput]="ruteModal[0]"></app-modal-noty>
+		<app-modal-noty [idModalInput]="idModal[3]"
+		[claseInput]="claseModal[3]" [closeInput]="closeModal[1]"
+		[confirmInput]="confirmModal[0]" [tituloInput]="tituloModal[3]"
+		[cuerpoInput]="cuerpoModal[2]" [ruteInput]="ruteModal[1]"></app-modal-noty>
+	</div>
+	<!-- MODAL -->
+</div>
+<div>
+	<section id="feature" class="section-padding wow fadeIn delay-05s">
+		<div  class="container">
+			<div class="row" style="display: flex;" id="fila_galeria">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="wrap-item text-center" id="texto_descripccion">
+						<h3 class="pad-bt15">Globe Guides</h3>
+						<p>
+							At Globe Guides, we create experiences for you to take your team beyond the ordinary.<br><br>
+							We believe that by providing people with transformative experiences, we enable them to grow exponentially and connect to the world in a fresh way. They return to the office with a new spark in their step, ready to embrace work and uniquely equipped to tackle challenges.<br><br>
+							Whatever your passion, we’ll help you bring it to life so you can vitalize your team, change their world and energize your business. We focus on the details so you can focus on the big picture.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div>
+	<section id="service" class="section-padding wow fadeInUp delay-05s">
+	   	<div class="container">
+	      	<div class="row">
+	         	<div class="col-md-12 text-center">
+	            	<h2 class="service-title pad-bt15 titulo-servicios">Services</h2>
+	            	<p class="sub-title pad-bt15">
+	               		Globe Guides will be your best ally. Our services focus on your needs and those of your work team, so that, with the experiences, your company can grow in ideas and new business opportunities.
+	            	</p>
+	            	<hr class="bottom-line">
+	         	</div>
+	         	<div class="col-md-6 col-sm-6 col-xs-12">
+	            	<div class="service-item" (click)="anclaServicios('#incentive')" [routerLink]="['/serv']">
+			            <h3>Incentive Travel</h3>
+			            <div class="contenedor-img-services">
+		               		<img  src="assets/img/incentivetravel/divers.jpg" alt="">
+		            	</div>
+		            	<p style="text-align: justify;">
+		               		Motivating your team is important. Today’s employees want more
+							than tokens, they want ownership of their successes and
+							experiences they can share. Give them something to take personal,
+							an incentive trip to look forward to and the opportunity to share
+							that. Take care of your team and watch your business. <br><br>
+							When you want to take care your team, the location isn’t the
+							important part. What matters is to get them a real taste of the
+							world you want them to conquer, giving them the perfect
+							environment to clear their mind and build new ideas for a new
+							level in their lives and business.
+		            	</p>
+	         		</div>
+	      		</div>
+	      		<div class="col-md-6 col-sm-6 col-xs-12">
+		         	<div class="service-item" (click)="anclaServicios('#teamR')" [routerLink]="['/serv']">
+				        <h3>Team Retreats</h3>
+	         		<div class="contenedor-img-services">
+	            		<img  src="assets/img/teamretreats/facial.jpg" alt="">
+	         		</div>
+	         			<p style="text-align: justify;">
+				            Efficiency and success is when all part work together for the same
+				            result. Your team is no different. Create opportunities for them
+				            to work together outside of the office, where they can show
+				            leadership, where they can relax a little and where they can see
+				            you have fun. <br><br> Leadership is about inspiring those around
+				            us, create that opportunity for others to see you as the one
+				            inspiring them and giving them the opportunity to step into their
+				            own.
+	         			</p>
+	      			</div>
+	   			</div>
+	   		</div>
+		</div>
+	</section>
+</div>
+
+<div>
+	<section id="blog" class=" blog-section section-padding wow fadeInUp delay-05s">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h2 class="service-title pad-bt15 titulo-blog">Our latest stories and projects</h2>
+					<p class="sub-title pad-bt15">
+						Find out about the latest of what is spoken in Globe Guides and join to talk about the topics that interest you.
+					</p>
+					<hr class="bottom-line" style="background-color: #8D323B">
+				</div>
+				<div *ngIf="listaConsulta.length > 0; else sinResultados">
+					<div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let o of listaConsulta | paginate: { itemsPerPage: 3, currentPage: p }; let i = index" >
+						<div class="blog-sec">
+							<div class="blog-img">
+								<a href="{{o.url}}?idArticulo={{o.idArticulo}}"> <img style="height: 240px;" src="{{o.fileName}}"
+									class="img-responsive">
+								</a>
+							</div>
+							<div class="blog-info">
+								<h2>{{o.titulo}}</h2>
+								<div class="blog-comment">
+									<p>
+										Posted In: <span>{{o.fechaGrabado}}</span>
+									</p>
+									<p>
+										<span><a href="{{o.url}}?idArticulo={{o.idArticulo}}"><i class="fa fa-eye"></i></a> {{o.contador}}</span>
+									</p>
+								</div>
+								<div class="blog-comment-truncate">
+									<p>{{o.resumen}}</p>
+								</div>
+								<a href="{{o.url}}?idArticulo={{o.idArticulo}}" class="read-more">Read more →</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<ng-template #sinResultados>
+					<tbody>
+						<tr>
+							<td>
+								<div class="row align-items-center">
+									<div class="col" style="text-align: center;">
+										<img style="max-width: 100%;" src="assets/img/icon/settings.gif" alt="">
+										<p class="bold">{{msg.lbl_info_sin_resultados}}</p>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</ng-template>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div style="display: none;" id="instafeed" class="row gallery"></div>
+
+<app-contact></app-contact>
+
+<footer id="footerHome">
+      <div class="container">
+        <div class="row text-center">
+          <p>&copy; Globe Guides. All Rights Reserved.</p>
+          <div class="credits">
+            Designed by <a href="#"> Nicolas Picon Jaimes </a>
+          </div>
+        </div>
+      </div>
+    </footer>
