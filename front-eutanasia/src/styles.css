@@ -741,6 +741,7 @@ box-shadow: 0px 0px 5px 2px #751e0e;
   -ms-transform: translateY(100%);
   transform: translateY(100%);
   opacity: 0;
+  background: #ffffff99;
   color: #761e0e;
   margin-bottom: 5px;
   -webkit-transition: 0.2s all;
@@ -1032,9 +1033,9 @@ Team
 }
 
 .team-img>img {
-  width: 100%;
-  height: 450px;
-  box-shadow: 0px 0px 10px #751e0e;
+width: 100%;
+height: 450px;
+box-shadow: 0px 0px 10px #751e0e;
 }
 
 .team .overlay {
@@ -1416,6 +1417,8 @@ background-color: #761e0e;
   margin-right: 5px;
 }
 
+
+
 /*------------------------------------*\
 Contact
 \*------------------------------------*/
@@ -1425,7 +1428,8 @@ Contact
   text-align: center;
 }
 
-.contact i {                                                                                                                                                                                                  : 36px;
+.contact i {
+  font-size: 36px;
   color: #761e0e;
   margin-bottom: 20px;
 }
@@ -1766,9 +1770,8 @@ Preloader
   -webkit-transition: .5s all;
   -moz-transition: .5s all;
   transition: .5s all;
-  /*-o-transform: .5s all;*/
+  -o-transform: .5s all;
 }
-
 .con i:hover {
   color: #E74C3C;
 }
@@ -1812,4 +1815,25 @@ h4{
 
 .owl-carousel .owl-item img{
   height: 440px;
+}
+
+.hvr-shutter-in-horizontal{
+  text-align: center;
+}
+
+.justifyText{
+  text-align: justify;
+}
+
+.textWhite{
+  color: white;
+}
+
+.textTeamHover{
+  padding: 50px 10px;
+  text-align: justify;
+}
+
+.displayNone{
+  display: none;
 }

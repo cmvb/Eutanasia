@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
   usuario: any;
   msgs = [];
   logueado: boolean;
+  galeria: any[];
 
   // Utilidades
   util: any;
@@ -48,6 +49,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     console.clear();
     this.util.limpiarSesion();
+    this.llenarGaleria();
   }
 
   limpiarExcepcion() {
@@ -56,25 +58,40 @@ export class HomeComponent implements OnInit {
     this.msgs = [];
   }
 
+  llenarGaleria() {
+    this.galeria = [];
+
+    for (let i = 1; i <= 56; i++) {
+      let obj = { nombre: '', titulo: '', subtitulo: '' };
+      obj.nombre = '' + i;
+      obj.titulo = 'Category';
+      obj.subtitulo = 'Texto de prueba.';
+
+      this.galeria.push(obj);
+    }
+
+
+  }
+
   login() {
     try {
       this.limpiarExcepcion();
       let url = this.const.urlRestService + this.const.urlControllerUsuario + 'login';
       let urlAuth = this.const.urlRestOauth;
       let obj = this.usuario;
-      
+
       this.restService.postOauthREST(urlAuth, this.usuario.usuario, this.usuario.password)
-      .subscribe(resp => {
-        if (resp) {
-          let token = JSON.stringify(resp);
-          sessionStorage.setItem(this.const.tokenNameAUTH, token);
-        }
-      }, 
-      error => {
-        this.ex = error.error;
-        this.msgs.push(this.util.mostrarNotificacion(this.ex));
-        console.log(error, "error");
-      });
+        .subscribe(resp => {
+          if (resp) {
+            let token = JSON.stringify(resp);
+            sessionStorage.setItem(this.const.tokenNameAUTH, token);
+          }
+        },
+          error => {
+            this.ex = error.error;
+            this.msgs.push(this.util.mostrarNotificacion(this.ex));
+            console.log(error, "error");
+          });
 
       this.restService.postREST(url, obj)
         .subscribe(resp => {
@@ -84,7 +101,7 @@ export class HomeComponent implements OnInit {
           // Procesamiento o Lógica Específica
           this.util.agregarSesionXItem([{ item: 'usuarioSesion', valor: this.sesion }]);
           this.irDashboard();
-        }, 
+        },
           error => {
             this.msgs = [];
             this.ex = error.error;

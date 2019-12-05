@@ -19,6 +19,7 @@ export class LoginGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     let LOCALHOST = 'http://localhost:4200/';
+    //let LOCALHOST = 'http://185.224.139.43:8080/front-eutanasia/';
 
     let URLactual = window.location.href;
     const helper = new JwtHelperService();

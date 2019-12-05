@@ -91,3 +91,31 @@
 	});
 
 })(jQuery);
+
+function reprodAudio(idAudio){
+    var audio = document.getElementById(idAudio);
+    audio.play();
+}
+
+function intro(){
+    setTimeout(
+        function(){
+            var btn = $('#intro');
+            btn.click();
+        }, 3000);
+}
+
+function reprodIntro(){
+    reprodAudio('guitar1');
+    reprodAudio('guitar2');
+    reprodAudio('bass');
+    reprodAudio('drum');
+}
+
+function reprodBand(){
+    reprodAudio('guitar2');
+    reprodAudio('guitarSolo');
+    reprodAudio('bass');
+    reprodAudio('drum');
+    reprodAudio('voice');
+}

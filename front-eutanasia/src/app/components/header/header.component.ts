@@ -52,4 +52,12 @@ export class HeaderComponent implements OnInit {
       console.log(e);
     }
   }
+
+  irRegistrar() {
+    let audio = new Audio();
+    audio.src = "assets/audio/crash.mp3";
+    audio.load();
+    audio.play();
+    this.router.navigate(['/register']);
+  }
 }

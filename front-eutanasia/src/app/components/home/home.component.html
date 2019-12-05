@@ -21,7 +21,7 @@
 			<!-- about -->
 			<div class="biography-grids">
 				<div style="padding-top: 1em;" class="col-md-6 biography-grid">
-					<img src="../../../assets/images/s.jpg" class="img-responsive" alt="" />
+					<img src="assets/images/s.jpg" class="img-responsive" alt="" />
 				</div>
 				<div class="col-md-6 biography-grid">
 					<p style="padding-top: 0">EUTANASIA, es una banda de Hard Rock/Rock and Roll formada en Ocaña
@@ -130,95 +130,20 @@
 			</div>
 			<!-- /Section header -->
 
-			<!-- Work -->
-			<div class="col-md-4 col-xs-6 work">
-				<img class="img-responsive" src="../../../assets/images/pics/1.jpg" alt="">
+			<!-- Works -->
+			<div class="col-md-4 col-xs-6 work" *ngFor="let foto of galeria">
+				<img class="img-responsive" src="assets/images/pics/{{foto.nombre}}.jpg" alt="">
 				<div class="overlay"></div>
 				<div class="work-content">
-					<span>Category</span>
-					<h3>Lorem ipsum dolor</h3>
+					<span>{{foto.titulo}}</span>
+					<h3>{{foto.subtitulo}}</h3>
 					<div class="work-link">
-						<a href="#"><i class="fa fa-external-link"></i></a>
-						<a class="lightbox" href="../../../assets/images/pics/1.jpg"><i class="fa fa-search"></i></a>
+						<a class="lightbox" href="assets/images/pics/{{foto.nombre}}.jpg"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
 			</div>
-			<!-- /Work -->
+			<!-- /Works -->
 
-			<!-- Work -->
-			<div class="col-md-4 col-xs-6 work">
-				<img class="img-responsive" src="../../../assets/images/pics/2.jpg" alt="">
-				<div class="overlay"></div>
-				<div class="work-content">
-					<span>Category</span>
-					<h3>Lorem ipsum dolor</h3>
-					<div class="work-link">
-						<a href="#"><i class="fa fa-external-link"></i></a>
-						<a class="lightbox" href="../../../assets/images/pics/2.jpg"><i class="fa fa-search"></i></a>
-					</div>
-				</div>
-			</div>
-			<!-- /Work -->
-
-			<!-- Work -->
-			<div class="col-md-4 col-xs-6 work">
-				<img class="img-responsive" src="../../../assets/images/pics/3.jpg" alt="">
-				<div class="overlay"></div>
-				<div class="work-content">
-					<span>Category</span>
-					<h3>Lorem ipsum dolor</h3>
-					<div class="work-link">
-						<a href="#"><i class="fa fa-external-link"></i></a>
-						<a class="lightbox" href="../../../assets/images/pics/3.jpg"><i class="fa fa-search"></i></a>
-					</div>
-				</div>
-			</div>
-			<!-- /Work -->
-
-			<!-- Work -->
-			<div class="col-md-4 col-xs-6 work">
-				<img class="img-responsive" src="../../../assets/images/pics/4.jpg" alt="">
-				<div class="overlay"></div>
-				<div class="work-content">
-					<span>Category</span>
-					<h3>Lorem ipsum dolor</h3>
-					<div class="work-link">
-						<a href="#"><i class="fa fa-external-link"></i></a>
-						<a class="lightbox" href="../../../assets/images/pics/4.jpg"><i class="fa fa-search"></i></a>
-					</div>
-				</div>
-			</div>
-			<!-- /Work -->
-
-			<!-- Work -->
-			<div class="col-md-4 col-xs-6 work">
-				<img class="img-responsive" src="../../../assets/images/pics/5.jpg" alt="">
-				<div class="overlay"></div>
-				<div class="work-content">
-					<span>Category</span>
-					<h3>Lorem ipsum dolor</h3>
-					<div class="work-link">
-						<a href="#"><i class="fa fa-external-link"></i></a>
-						<a class="lightbox" href="../../../assets/images/pics/5.jpg"><i class="fa fa-search"></i></a>
-					</div>
-				</div>
-			</div>
-			<!-- /Work -->
-
-			<!-- Work -->
-			<div class="col-md-4 col-xs-6 work">
-				<img class="img-responsive" src="../../../assets/images/pics/6.jpg" alt="">
-				<div class="overlay"></div>
-				<div class="work-content">
-					<span>Category</span>
-					<h3>Lorem ipsum dolor</h3>
-					<div class="work-link">
-						<a href="#"><i class="fa fa-external-link"></i></a>
-						<a class="lightbox" href="../../../assets/images/pics/6.jpg"><i class="fa fa-search"></i></a>
-					</div>
-				</div>
-			</div>
-			<!-- /Work -->
 
 		</div>
 		<!-- /Row -->
@@ -241,9 +166,8 @@
 			<div class="col-md-3 ser-grid">
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
-						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2013-concurso_rock_2.jpg" class="img-responsive"
-								alt="" /></i>
+						<i class="glyphicon" aria-hidden="true"><img src="assets/images/events/2013-concurso_rock_2.jpg"
+								class="img-responsive" alt="" /></i>
 					</div>
 					<h4>2do Concurso de Rock</h4>
 					<p>Año: 2013 - Ganadores del 2do puesto. Evento realizado en la ciudad de Ocaña.</p>
@@ -252,9 +176,8 @@
 			<div class="col-md-3 ser-grid">
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
-						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2013-rifa_concierto.jpg" class="img-responsive"
-								alt="" /></i>
+						<i class="glyphicon" aria-hidden="true"><img src="assets/images/events/2013-rifa_concierto.jpg"
+								class="img-responsive" alt="" /></i>
 					</div>
 					<h4>Rifa Concierto FORMA</h4>
 					<p>Año: 2013 - Agrupación de talentos. Evento realizado en la ciudad de Ocaña.</p>
@@ -264,7 +187,7 @@
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
 						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2013-tribute_to_the_gods.jpg" class="img-responsive"
+								src="assets/images/events/2013-tribute_to_the_gods.jpg" class="img-responsive"
 								alt="" /></i>
 					</div>
 					<h4>Tribute to the Gods</h4>
@@ -275,7 +198,7 @@
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
 						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2013-underground_rock_2.jpg" class="img-responsive"
+								src="assets/images/events/2013-underground_rock_2.jpg" class="img-responsive"
 								alt="" /></i>
 					</div>
 					<h4>Underground Rock 2</h4>
@@ -289,7 +212,7 @@
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
 						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2013-underground_rock_3.jpg" class="img-responsive"
+								src="assets/images/events/2013-underground_rock_3.jpg" class="img-responsive"
 								alt="" /></i>
 					</div>
 					<h4>Underground Rock 3</h4>
@@ -300,8 +223,8 @@
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
 						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2014-concierto_por_animales.jpg"
-								class="img-responsive" alt="" /></i>
+								src="assets/images/events/2014-concierto_por_animales.jpg" class="img-responsive"
+								alt="" /></i>
 					</div>
 					<h4>Concierto por los Animales</h4>
 					<p>Año: 2014 - Banda local. Evento realizado en la ciudad de Ocaña.</p>
@@ -310,9 +233,8 @@
 			<div class="col-md-3 ser-grid">
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
-						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2014-concurso_rock_3.jpg" class="img-responsive"
-								alt="" /></i>
+						<i class="glyphicon" aria-hidden="true"><img src="assets/images/events/2014-concurso_rock_3.jpg"
+								class="img-responsive" alt="" /></i>
 					</div>
 					<h4>3er Concurso de Rock</h4>
 					<p>Año: 2014 - Ganadores a mejor guitarrista. Evento realizado en la ciudad de Ocaña.</p>
@@ -322,7 +244,7 @@
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
 						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2014-underground_rock_iv.jpg" class="img-responsive"
+								src="assets/images/events/2014-underground_rock_iv.jpg" class="img-responsive"
 								alt="" /></i>
 					</div>
 					<h4>Underground Rock 4</h4>
@@ -335,9 +257,8 @@
 			<div class="col-md-3 ser-grid">
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
-						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2015-guardia_fest.jpg" class="img-responsive"
-								alt="" /></i>
+						<i class="glyphicon" aria-hidden="true"><img src="assets/images/events/2015-guardia_fest.jpg"
+								class="img-responsive" alt="" /></i>
 					</div>
 					<h4>La Guardia Fest</h4>
 					<p>Año: 2015 - Banda invitada. Evento realizado en la ciudad de Cúcuta.</p>
@@ -347,8 +268,8 @@
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
 						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2015-halloween_trick_or_treat.jpg"
-								class="img-responsive" alt="" /></i>
+								src="assets/images/events/2015-halloween_trick_or_treat.jpg" class="img-responsive"
+								alt="" /></i>
 					</div>
 					<h4>Halloween Trick or Treat</h4>
 					<p>Año: 2015 - Banda organizadora. Evento realizado en la ciudad de Ocaña.</p>
@@ -357,9 +278,8 @@
 			<div class="col-md-3 ser-grid">
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
-						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2015-rock_nigth.jpg" class="img-responsive"
-								alt="" /></i>
+						<i class="glyphicon" aria-hidden="true"><img src="assets/images/events/2015-rock_nigth.jpg"
+								class="img-responsive" alt="" /></i>
 					</div>
 					<h4>Night Rock</h4>
 					<p>Año: 2015 - Banda local. Evento realizado en la ciudad de Ocaña.</p>
@@ -369,8 +289,8 @@
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
 						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2016_catatumbo_rock_festival.jpg"
-								class="img-responsive" alt="" /></i>
+								src="assets/images/events/2016_catatumbo_rock_festival.jpg" class="img-responsive"
+								alt="" /></i>
 					</div>
 					<h4>Catatumbo Rock Festival</h4>
 					<p>Año: 2016 - Banda local. Evento realizado en la ciudad de Ocaña.</p>
@@ -383,8 +303,8 @@
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
 						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2016-concierto_fraternidad.jpg"
-								class="img-responsive" alt="" /></i>
+								src="assets/images/events/2016-concierto_fraternidad.jpg" class="img-responsive"
+								alt="" /></i>
 					</div>
 					<h4>Concierto de la Fraternidad</h4>
 					<p>Año: 2016 - Banda local. Evento realizado en la ciudad de Ocaña.</p>
@@ -394,7 +314,7 @@
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
 						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2016-pool_party_tattoo.jpg" class="img-responsive"
+								src="assets/images/events/2016-pool_party_tattoo.jpg" class="img-responsive"
 								alt="" /></i>
 					</div>
 					<h4>Pool Party Tattoo</h4>
@@ -405,7 +325,7 @@
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
 						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2016-rock_al_parche_2.jpg" class="img-responsive"
+								src="assets/images/events/2016-rock_al_parche_2.jpg" class="img-responsive"
 								alt="" /></i>
 					</div>
 					<h4>Rock al Parche 2</h4>
@@ -415,9 +335,8 @@
 			<div class="col-md-3 ser-grid">
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
-						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2016-rock_al_parking.jpg" class="img-responsive"
-								alt="" /></i>
+						<i class="glyphicon" aria-hidden="true"><img src="assets/images/events/2016-rock_al_parking.jpg"
+								class="img-responsive" alt="" /></i>
 					</div>
 					<h4>Rock al Parking</h4>
 					<p>Año: 2016 - Banda local. Evento realizado en la ciudad de Ocaña.</p>
@@ -429,9 +348,8 @@
 			<div class="col-md-3 ser-grid">
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
-						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2016-somos_uno.jpg" class="img-responsive"
-								alt="" /></i>
+						<i class="glyphicon" aria-hidden="true"><img src="assets/images/events/2016-somos_uno.jpg"
+								class="img-responsive" alt="" /></i>
 					</div>
 					<h4>Somos Uno</h4>
 					<p>Año: 2016 - Banda invitada. Evento realizado en la ciudad de Cúcuta.</p>
@@ -441,7 +359,7 @@
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
 						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2017-estridente_amanecer.jpg" class="img-responsive"
+								src="assets/images/events/2017-estridente_amanecer.jpg" class="img-responsive"
 								alt="" /></i>
 					</div>
 					<h4>Estridente Amanecer</h4>
@@ -452,7 +370,7 @@
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
 						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2017-possesed_by_metal.jpg" class="img-responsive"
+								src="assets/images/events/2017-possesed_by_metal.jpg" class="img-responsive"
 								alt="" /></i>
 					</div>
 					<h4>Possesed By Metal</h4>
@@ -462,9 +380,8 @@
 			<div class="col-md-3 ser-grid">
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
-						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2019-rock_on_fire.jpeg" class="img-responsive"
-								alt="" /></i>
+						<i class="glyphicon" aria-hidden="true"><img src="assets/images/events/2019-rock_on_fire.jpeg"
+								class="img-responsive" alt="" /></i>
 					</div>
 					<h4>Rock On Fire In Craft Bar</h4>
 					<p>Año: 2019 - Banda invitada. Evento realizado en la ciudad de Bogotá.</p>
@@ -474,8 +391,8 @@
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
 						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2019-live_session_alternativos.jpg"
-								class="img-responsive" alt="" /></i>
+								src="assets/images/events/2019-live_session_alternativos.jpg" class="img-responsive"
+								alt="" /></i>
 					</div>
 					<h4>Live Sessions In Alternativos</h4>
 					<p>Año: 2019 - Banda invitada. Evento realizado en la ciudad de Ocaña.</p>
@@ -485,8 +402,8 @@
 				<div class="ser-top">
 					<div class="con hvr-shutter-in-horizontal">
 						<i class="glyphicon" aria-hidden="true"><img
-								src="../../../assets/images/events/2019-beyond_the_life_and_death.jpeg"
-								class="img-responsive" alt="" /></i>
+								src="assets/images/events/2019-beyond_the_life_and_death.jpeg" class="img-responsive"
+								alt="" /></i>
 					</div>
 					<h4>Beyond The Life And Death</h4>
 					<p>Año: 2019 - Banda invitada. Evento realizado en la ciudad de Cúcuta.</p>
@@ -546,8 +463,9 @@
 			<!-- About slider -->
 			<div class="col-md-6">
 				<div id="about-slider" class="owl-carousel owl-theme">
-					<img class="img-responsive" src="../../../assets/images/demo.jpg" alt="">
-					<img class="img-responsive" src="../../../assets/images/compilado.jpg" alt="">
+					<img class="img-responsive" src="assets/images/demo.jpg" alt="">
+					<img class="img-responsive" src="assets/images/collage.jpg" alt="">
+					<img class="img-responsive" src="assets/images/pics/57.jpg" alt="">
 				</div>
 			</div>
 			<!-- /About slider -->
@@ -565,7 +483,7 @@
 <div id="numbers" class="section sm-padding">
 
 	<!-- Background Image -->
-	<div class="bg-img" style="background-image: url('../../../assets/images/fondo2.jpg');">
+	<div class="bg-img" style="background-image: url('images/fondo2.jpg');">
 		<div class="overlay"></div>
 	</div>
 	<!-- /Background Image -->
@@ -642,12 +560,12 @@
 
 			<div class="service-grids">
 				<div class="col-md-6 ser-grid">
-					<iframe style="border: 1px solid #dacfcf;box-shadow: 0 0 5px #000;" width="560" height="315"
+					<iframe style="border: 1px solid #dacfcf;box-shadow: 0 0 5px #000;" width="100%" height="310px"
 						src="https://www.youtube.com/embed/PZMzYK1ZNaI?autohide=1" frameborder="0"
 						allowfullscreen></iframe>
 				</div>
 				<div class="col-md-6 ser-grid">
-					<iframe style="border: 1px solid #dacfcf;box-shadow: 0 0 5px #000;" width="560" height="315"
+					<iframe style="border: 1px solid #dacfcf;box-shadow: 0 0 5px #000;" width="100%" height="310px"
 						src="https://www.youtube.com/embed/p4t8_3qyETw?autohide=1" frameborder="0"
 						allowfullscreen></iframe>
 				</div>
@@ -666,7 +584,7 @@
 <div id="testimonial" class="section md-padding">
 
 	<!-- Background Image -->
-	<div class="bg-img" style="background-image: url('../../../assets/images/fondo2.jpg');">
+	<div class="bg-img" style="background-image: url('images/fondo2.jpg');">
 		<div class="overlay"></div>
 	</div>
 	<!-- /Background Image -->
@@ -677,6 +595,12 @@
 		<!-- Row -->
 		<div class="row">
 
+			<!-- Section header -->
+			<div class="section-header text-center">
+				<h2 class="title textWhite">Colaboradores</h2>
+			</div>
+			<!-- /Section header -->
+
 			<!-- Testimonial slider -->
 			<div class="col-md-10 col-md-offset-1">
 				<div id="testimonial-slider" class="owl-carousel owl-theme">
@@ -684,24 +608,32 @@
 					<!-- testimonial -->
 					<div class="testimonial">
 						<div class="testimonial-meta">
-							<img src="../../../assets/img/perso1.jpg" alt="">
-							<h3 class="white-text">John Doe</h3>
-							<span>Web Designer</span>
+							<img src="assets/images/carlosjacome.jpg" alt="">
+							<h3 class="white-text">Carlos Jácome</h3>
+							<span>Diseñador Gráfico</span>
 						</div>
-						<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non
-							consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
+						<p class="white-text justifyText">Apasionado por la música, el arte y el diseño, me he
+							desempeñado profesionalmente en Agencias de Publicidad & Diseño y en la parte académica como
+							docente. De forma alterna he desarrollado algunos trabajos artísticos independientes.
+							<span>
+								<a href="http://www.carlosjacomeartworks.com/" class="white-text">Ver Página</a>
+							</span>
+						</p>
 					</div>
 					<!-- /testimonial -->
 
 					<!-- testimonial -->
 					<div class="testimonial">
 						<div class="testimonial-meta">
-							<img src="../../../assets/img/perso2.jpg" alt="">
-							<h3 class="white-text">John Doe</h3>
-							<span>Web Designer</span>
+							<img src="assets/images/guardia.jpg" alt="">
+							<h3 class="white-text">Guardia Estudio</h3>
+							<span>Estudio de Grabación y Ensayo</span>
 						</div>
-						<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non
-							consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
+						<p class="white-text justifyText">Esto es un texto de ejemplo.
+							<span>
+								<a href="http://www.carlosjacomeartworks.com/" class="white-text">Ver Página</a>
+							</span>
+						</p>
 					</div>
 					<!-- /testimonial -->
 
@@ -737,12 +669,18 @@
 			<div class="col-sm-4">
 				<div class="team">
 					<div class="team-img">
-						<img class="img-responsive" src="../../../assets/images/band/pedro.jpg" alt="">
-						<div class="overlay">
+						<img class="img-responsive" src="assets/images/band/pedro.jpg" alt="">
+						<div onclick="reprodAudio('voice')" class="overlay">
 							<div class="team-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-google-plus"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="https://www.facebook.com/pedro.sanchezpacheco.1"><i
+										class="fa fa-facebook"></i></a>
+							</div>
+							<div>
+								<p class="textTeamHover textWhite">Mis gustos musicales son música vieja, simple, antes
+									no habían tantos efectos, pedales ni nada de eso, era música más cruda. simple y
+									directo al cráneo. Músicos como Hendrix nunca volverán, de los que tocaban
+									prácticamente con las uñas. Algunas de mis influencias musicales son: AC/DC, Led
+									Zeppelin, Black Sabbath, Rolling Stones.</p>
 							</div>
 						</div>
 					</div>
@@ -758,12 +696,16 @@
 			<div class="col-sm-4">
 				<div class="team">
 					<div class="team-img">
-						<img class="img-responsive" src="../../../assets/images/band/pipe.jpg" alt="">
-						<div class="overlay">
+						<img class="img-responsive" src="assets/images/band/pipe.jpg" alt="">
+						<div onclick="reprodAudio('guitar2')" class="overlay">
 							<div class="team-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-google-plus"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="https://www.facebook.com/profile.php?id=100000299877209"><i
+										class="fa fa-facebook"></i></a>
+							</div>
+							<div>
+								<p class="textTeamHover textWhite">Morbi mattis felis at nunc. Duis viverra diam non
+									justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt
+									sem sed arcu. Nunc posuere.</p>
 							</div>
 						</div>
 					</div>
@@ -779,17 +721,20 @@
 			<div class="col-sm-4">
 				<div class="team">
 					<div class="team-img">
-						<img class="img-responsive" src="../../../assets/images/band/jorge.jpg" alt="">
-						<div class="overlay">
+						<img class="img-responsive" src="assets/images/band/jorge.jpg" alt="">
+						<div onclick="reprodAudio('guitarSolo')" class="overlay">
 							<div class="team-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-google-plus"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="https://www.facebook.com/jorgeandresq1"><i class="fa fa-facebook"></i></a>
+							</div>
+							<div>
+								<p class="textTeamHover textWhite">Morbi mattis felis at nunc. Duis viverra diam non
+									justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt
+									sem sed arcu. Nunc posuere.</p>
 							</div>
 						</div>
 					</div>
 					<div class="team-content">
-						<h3>Juan P. Sánchez</h3>
+						<h3>Jorge Quintero</h3>
 						<span>Guitarrista</span>
 					</div>
 				</div>
@@ -800,12 +745,15 @@
 			<div class="col-sm-4">
 				<div class="team">
 					<div class="team-img">
-						<img class="img-responsive" src="../../../assets/images/band/carlos.jpg" alt="">
-						<div class="overlay">
+						<img class="img-responsive" src="assets/images/band/carlos.jpg" alt="">
+						<div onclick="reprodAudio('bass')" class="overlay">
 							<div class="team-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-google-plus"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="https://www.facebook.com/CMVB19"><i class="fa fa-facebook"></i></a>
+							</div>
+							<div>
+								<p class="textTeamHover textWhite">Morbi mattis felis at nunc. Duis viverra diam non
+									justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt
+									sem sed arcu. Nunc posuere.</p>
 							</div>
 						</div>
 					</div>
@@ -821,18 +769,22 @@
 			<div class="col-sm-4">
 				<div class="team">
 					<div class="team-img">
-						<img class="img-responsive" src="../../../assets/images/band/caratula.jpg" alt="">
-						<div class="overlay">
+						<img class="img-responsive" src="assets/images/band/caratula.jpg" alt="">
+						<div onclick="reprodBand()" class="overlay">
 							<div class="team-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-google-plus"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="https://www.facebook.com/eutanasiaparatodos/"><i
+										class="fa fa-facebook"></i></a>
+							</div>
+							<div>
+								<p class="textTeamHover textWhite">Morbi mattis felis at nunc. Duis viverra diam non
+									justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt
+									sem sed arcu. Nunc posuere.</p>
 							</div>
 						</div>
 					</div>
 					<div class="team-content">
-						<h3>Leo Navarro</h3>
-						<span>Baterista/Coros</span>
+						<h3>EUTANASIA</h3>
+						<span>Frenético RnR</span>
 					</div>
 				</div>
 			</div>
@@ -842,12 +794,15 @@
 			<div class="col-sm-4">
 				<div class="team">
 					<div class="team-img">
-						<img class="img-responsive" src="../../../assets/images/band/leo.jpg" alt="">
-						<div class="overlay">
+						<img class="img-responsive" src="assets/images/band/leo.jpg" alt="">
+						<div onclick="reprodAudio('drum')" class="overlay">
 							<div class="team-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-google-plus"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="https://www.facebook.com/leo.l.navarro"><i class="fa fa-facebook"></i></a>
+							</div>
+							<div>
+								<p class="textTeamHover textWhite">Morbi mattis felis at nunc. Duis viverra diam non
+									justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt
+									sem sed arcu. Nunc posuere.</p>
 							</div>
 						</div>
 					</div>
@@ -887,7 +842,7 @@
 			<div class="col-md-4">
 				<div class="blog">
 					<div class="blog-img">
-						<img class="img-responsive" src="../../../assets/img/blog1.jpg" alt="">
+						<img class="img-responsive" src="assets/img/blog1.jpg" alt="">
 					</div>
 					<div class="blog-content">
 						<ul class="blog-meta">
@@ -908,7 +863,7 @@
 			<div class="col-md-4">
 				<div class="blog">
 					<div class="blog-img">
-						<img class="img-responsive" src="../../../assets/img/blog2.jpg" alt="">
+						<img class="img-responsive" src="assets/img/blog2.jpg" alt="">
 					</div>
 					<div class="blog-content">
 						<ul class="blog-meta">
@@ -929,7 +884,7 @@
 			<div class="col-md-4">
 				<div class="blog">
 					<div class="blog-img">
-						<img class="img-responsive" src="../../../assets/img/blog3.jpg" alt="">
+						<img class="img-responsive" src="assets/img/blog3.jpg" alt="">
 					</div>
 					<div class="blog-content">
 						<ul class="blog-meta">
@@ -979,6 +934,10 @@
 	<!-- /Container -->
 </div>
 <!-- /Contact -->
+
+<!-- Back to top -->
+<div id="back-to-top"></div>
+<!-- /Back to top -->
 
 <!-- Importamos el Footer -->
 <app-footer></app-footer>
